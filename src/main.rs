@@ -66,6 +66,8 @@ fn main() {
     let stl = parse_stl(stl_bytes).unwrap();
     let mut duration = start.elapsed();
     println!("Done in {}", format_duration(duration));
+    println!("STL bounds: {:?}", stl.dimension_range().unwrap());
+
 
     println!("Reading REF");
     start = Instant::now();
